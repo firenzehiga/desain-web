@@ -1,4 +1,4 @@
-# Desain Web SIB NF Academy
+# Desain Web | SIB NF Academy
 
 Repository ini berisi kumpulan tugas-tugas dari course Desain Web SIB NF Academy.
 
@@ -6,7 +6,6 @@ Repository ini berisi kumpulan tugas-tugas dari course Desain Web SIB NF Academy
 
 ## Struktur Repo
 - Setiap tugas akan disimpan sesuai pertemuan.
-- File tugas pertemuan 1: `biodata.html`
 
 ---
 
