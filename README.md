@@ -5,7 +5,7 @@ Repository ini berisi kumpulan tugas-tugas dari course Desain Web SIB NF Academy
 ## Daftar Pertemuan
 
 - **Pertemuan 1**: 2 September 2025
-  - [cv-biodata.html](cv-biodata.html)
+  - [cv-biodata.html](https://github.com/firenzehiga/desain-web/blob/pertemuan-1/cv-biodata.html)
 
 - **Pertemuan 2**: 3 September 2025
   - [tabel.html](tabel.html)
