@@ -1,4 +1,4 @@
-# Desain Web SIB NF Academy
+# Desain Web | SIB NF Academy
 
 Repository ini berisi kumpulan tugas-tugas dari course Desain Web SIB NF Academy.
 
