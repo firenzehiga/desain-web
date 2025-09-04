@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tugas 3 - Layout Frame</title>
+</head>
+<frameset rows="15%,10%,* ,10%" frameborder="1" border="1">
+    <frame src="layout/header.html" name="header" noresize scrolling="no">
+    <frame src="layout/nav.html" name="nav" noresize scrolling="no">
+    <frameset cols="20%,* ,20%">
+        <frame src="layout/left.html" name="left" noresize>
+        <frame src="pages/home.html" name="maincontent">
+        <frame src="layout/right.html" name="right" noresize>
+    </frameset>
+    <frame src="layout/footer.html" name="footer" noresize scrolling="no">
+</frameset>
+<noframes>
+    Browser Anda tidak mendukung frameset.
+</noframes>
+</html>

@@ -10,6 +10,10 @@ Repository ini berisi kumpulan tugas-tugas dari course Desain Web SIB NF Academy
 - **Pertemuan 2**: 3 September 2025
   - [tabel-jadwal.html](tabel-jadwal.html)
 
+- **Pertemuan 3**: 4 September 2025
+  - [index.html](index.html)
+  - Tugas: Membuat layout website menggunakan frameset sesuai ketentuan (header/banner, navigation menu, left content, main content, right content, footer) dan link internal/eksternal sesuai instruksi tugas.
+
 ## Struktur Repo
 - Setiap tugas akan disimpan sesuai pertemuan.
 - File tugas pertemuan 1: `Membuat CV sederhana dengan HTML murni`
