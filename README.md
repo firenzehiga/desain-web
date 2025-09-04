@@ -18,6 +18,7 @@ Repository ini berisi kumpulan tugas-tugas dari course Desain Web SIB NF Academy
 - Setiap tugas akan disimpan sesuai pertemuan.
 - File tugas pertemuan 1: `Membuat CV sederhana dengan HTML murni`
 - File tugas pertemuan 2: `Membuat Tabel sederhana dengan sesuai ketentuan`
+- File tugas pertemuan 3: `Membuat Layout website menggunakan frameset sesuai ketentuan`
 
 ---
 
