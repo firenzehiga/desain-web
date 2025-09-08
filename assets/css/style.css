@@ -1,12 +1,18 @@
-/* Global CSS untuk Tugas 4 - Firenze Higa Putra */
+/* style.css — external CSS untuk Tugas 4 - Firenze Higa Putra
+	 Deskripsi: Gaya external yang dipakai di seluruh halaman tugas (nav, tabel, fieldset, layout dasar).
+	 Digunakan oleh: semua halaman/layout (index + semua frame).
+	 Catatan: styling khusus per-halaman (contoh: header banner, gallery grid, tabel study highlight) ditempatkan
+	 dalam internal CSS.
+*/
 
-/* untuk mengatur margin dan padding secara keseluruhan */
+/* Reset: normalisasi ukuran margin/padding dan box-sizing */
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
+/* Base typography & page height: digunakan oleh semua halaman */
 html,
 body {
 	font-family: "Segoe UI", Arial, sans-serif;
@@ -17,22 +23,39 @@ body {
 	height: 100%;
 }
 
+.header {
+	background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+		url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80");
+	background-size: cover;
+	background-position: center;
+	color: #fff;
+	text-align: center;
+	padding: 15px 0;
+	margin: 0;
+}
+.header h1 {
+	color: #fff;
+	font-size: 28px;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+	margin: 8px 0;
+}
+
 .text-center {
 	text-align: center;
 }
 
-/* class untuk left dan right content */
+/* .page-content: wrapper khusus untuk frame konten (left/right main) */
 .page-content {
 	padding: 15px;
-	background: white;
+	background: #fff;
 }
-
 .container {
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0 15px;
 }
 
+/* Styling default untuk tag html  */
 h2 {
 	font-size: 25px;
 	font-weight: 700;
@@ -49,7 +72,7 @@ a {
 	text-decoration: none;
 }
 
-/* Class untuk Navigasi menu */
+/* Styling default untuk navigasi menu */
 .nav-menu {
 	background: #fff;
 	padding: 0 12px;
@@ -60,7 +83,6 @@ a {
 	align-items: center;
 	justify-content: center;
 }
-
 .nav-menu a {
 	margin: 0 15px;
 	padding: 8px 16px;
@@ -69,70 +91,80 @@ a {
 	border-radius: 5px;
 	transition: all 0.3s ease;
 	background: #34495e;
-	text-decoration: none;
 }
-
 .nav-menu a:hover {
 	background: #2980b9;
-	color: white;
-	text-decoration: none;
+	color: #fff;
 }
 
-/* Class untuk Table */
+/* .data-table: styling default untuk tabel yang dipakai di Personal Profile dan My Study */
 .data-table {
 	width: 90%;
 	margin: 20px auto;
 	border-collapse: collapse;
-	background: white;
+	background: #fff;
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 	border-radius: 8px;
 	overflow: hidden;
 }
-
 .data-table th {
 	background: #34495e;
-	color: white;
+	color: #fff;
 	padding: 12px;
 	font-weight: 600;
 }
-
 .data-table td {
 	padding: 10px 12px;
 	border-bottom: 1px solid #ecf0f1;
 }
-
 .data-table tr:nth-child(even) {
 	background: #f8f9fa;
 }
 
-/* Class untuk Fieldset */
-.content-box {
+/* .content-box: styling default untuk fieldset pada frame left/right */
+.content-box,
+fieldset {
 	border-radius: 8px;
 	padding: 15px;
 	margin: 10px;
-	background: white;
+	background: #fff;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
-
 .content-box a {
 	font-weight: 500;
 	color: #2c3e50;
 	text-decoration: none;
 }
-
-.content-box legend {
+.content-box legend,
+fieldset legend {
 	padding: 0 10px;
 	font-weight: 700;
 	color: #2c3e50;
-	background: white;
+	background: #fff;
 }
 
-/* List - Global */
+/* styling default untuk list */
 ul {
 	margin: 10px 0 0 20px;
 }
-
 ul li {
 	margin: 8px 0;
 	padding: 2px 0;
 }
+
+.footer {
+	background: #34495e;
+	color: white;
+	text-align: center;
+	padding: 10px 0;
+	margin: 0;
+}
+.footer p {
+	color: white;
+	font-size: 14px;
+	margin: 0;
+}
+
+/* Catatan:
+	 -  beberapa file HTML sudah memiliki styling internal internal di dalamnya.
+*/
