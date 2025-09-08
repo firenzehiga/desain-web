@@ -1,18 +1,15 @@
 /* style.css — external CSS untuk Tugas 4 - Firenze Higa Putra
-	 Deskripsi: Gaya external yang dipakai di seluruh halaman tugas (nav, tabel, fieldset, layout dasar).
-	 Digunakan oleh: semua halaman/layout (index + semua frame).
-	 Catatan: styling khusus per-halaman (contoh: header banner, gallery grid, tabel study highlight) ditempatkan
-	 dalam internal CSS.
+   Deskripsi: Styling global yang dipakai di seluruh halaman.
+   Struktur: Tag selector dulu (default), lalu class khusus untuk variasi per-halaman.
 */
 
-/* Reset: normalisasi ukuran margin/padding dan box-sizing */
+/* STYLE DEFAULT UNTUK KESELURUHAN */
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
-/* Base typography & page height: digunakan oleh semua halaman */
 html,
 body {
 	font-family: "Segoe UI", Arial, sans-serif;
@@ -23,6 +20,79 @@ body {
 	height: 100%;
 }
 
+/* Headers */
+h2 {
+	font-size: 25px;
+	font-weight: 700;
+	text-align: center;
+	margin: 8px 0;
+	color: #34495e;
+}
+
+/* Paragraphs */
+p {
+	margin: 10px 0;
+	color: #34495e;
+	font-weight: 500;
+}
+
+/* Hyperlinks */
+a {
+	text-decoration: none;
+	color: #2c3e50;
+	font-weight: 600;
+}
+
+/* Tables */
+table {
+	width: 90%;
+	margin: 20px auto;
+	border-collapse: collapse;
+	background: #fff;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+	overflow: hidden;
+}
+table th {
+	background: #34495e;
+	color: #fff;
+	padding: 12px;
+	font-weight: 600;
+}
+table td {
+	padding: 10px 12px;
+	border-bottom: 1px solid #ecf0f1;
+}
+table tr:nth-child(even) {
+	background: #f8f9fa;
+}
+
+/* Fieldsets */
+fieldset {
+	border-radius: 8px;
+	padding: 15px;
+	margin: 10px;
+	background: #fff;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+	border: 1px solid #ddd;
+}
+fieldset legend {
+	padding: 0 10px;
+	font-weight: 700;
+	color: #2c3e50;
+	background: #fff;
+}
+
+/* Lists */
+ul {
+	margin: 10px 0 0 20px;
+}
+ul li {
+	margin: 8px 0;
+	padding: 2px 0;
+}
+
+/* CLASS UNTUK LAYOUT */
 .header {
 	background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
 		url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80");
@@ -31,7 +101,6 @@ body {
 	color: #fff;
 	text-align: center;
 	padding: 15px 0;
-	margin: 0;
 }
 .header h1 {
 	color: #fff;
@@ -40,39 +109,6 @@ body {
 	margin: 8px 0;
 }
 
-.text-center {
-	text-align: center;
-}
-
-/* .page-content: wrapper khusus untuk frame konten (left/right main) */
-.page-content {
-	padding: 15px;
-	background: #fff;
-}
-.container {
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 0 15px;
-}
-
-/* Styling default untuk tag html  */
-h2 {
-	font-size: 25px;
-	font-weight: 700;
-	text-align: center;
-	margin: 8px 0;
-	color: #34495e;
-}
-p {
-	margin: 10px 0;
-	color: #34495e;
-	font-weight: 500;
-}
-a {
-	text-decoration: none;
-}
-
-/* Styling default untuk navigasi menu */
 .nav-menu {
 	background: #fff;
 	padding: 0 12px;
@@ -97,59 +133,9 @@ a {
 	color: #fff;
 }
 
-/* .data-table: styling default untuk tabel yang dipakai di Personal Profile dan My Study */
-.data-table {
-	width: 90%;
-	margin: 20px auto;
-	border-collapse: collapse;
-	background: #fff;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-	border-radius: 8px;
-	overflow: hidden;
-}
-.data-table th {
-	background: #34495e;
-	color: #fff;
-	padding: 12px;
-	font-weight: 600;
-}
-.data-table td {
-	padding: 10px 12px;
-	border-bottom: 1px solid #ecf0f1;
-}
-.data-table tr:nth-child(even) {
-	background: #f8f9fa;
-}
-
-/* .content-box: styling default untuk fieldset pada frame left/right */
-.content-box,
-fieldset {
-	border-radius: 8px;
+.page-content {
 	padding: 15px;
-	margin: 10px;
 	background: #fff;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-.content-box a {
-	font-weight: 500;
-	color: #2c3e50;
-	text-decoration: none;
-}
-.content-box legend,
-fieldset legend {
-	padding: 0 10px;
-	font-weight: 700;
-	color: #2c3e50;
-	background: #fff;
-}
-
-/* styling default untuk list */
-ul {
-	margin: 10px 0 0 20px;
-}
-ul li {
-	margin: 8px 0;
-	padding: 2px 0;
 }
 
 .footer {
@@ -157,7 +143,6 @@ ul li {
 	color: white;
 	text-align: center;
 	padding: 10px 0;
-	margin: 0;
 }
 .footer p {
 	color: white;
@@ -165,6 +150,102 @@ ul li {
 	margin: 0;
 }
 
-/* Catatan:
-	 -  beberapa file HTML sudah memiliki styling internal internal di dalamnya.
-*/
+/* CLASS UTILITY yang bebas dipakai*/
+
+.text-center {
+	text-align: center;
+}
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+/* CLASS KHUSUS UNTUK HALAMAN*/
+
+/* --- Home Page --- */
+.intro {
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 15px;
+	background: #ecf0f1;
+	border-radius: 8px;
+}
+
+.profile-table {
+	width: 50%;
+}
+.profile-table td:first-child {
+	font-weight: 600;
+	width: 120px;
+	color: #2c3e50;
+}
+
+/* --- Study Page --- */
+.study-table th {
+	background: #2980b9;
+}
+.study-table td {
+	padding: 8px;
+	text-align: center;
+}
+
+/* --- Fieldsets Page Sosial Media  --- */
+.social-media {
+	border: 2px solid #3498db;
+}
+.social-media a:hover {
+	color: #3498db;
+}
+
+/* --- Fieldsets Page Materi Fullstack  --- */
+.fullstack-course {
+	border: 2px solid #e74c3c;
+}
+
+.fullstack-course a:hover {
+	color: #c0392b;
+}
+
+/* --- Gallery Page --- */
+.gallery-marquee {
+	padding: 10px;
+	margin: 15px 0;
+	background: #f8f9fa;
+	border-radius: 8px;
+}
+.gallery-marquee img {
+	height: 80px;
+	object-fit: cover;
+	border-radius: 6px;
+	margin-right: 10px;
+}
+
+.gallery-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+	gap: 12px;
+	margin: 18px 0;
+}
+.gallery-item {
+	overflow: hidden;
+	border-radius: 8px;
+	border: 1px solid #e6e9ee;
+	background: #fff;
+}
+.gallery-item img {
+	width: 100%;
+	height: 100px;
+	object-fit: cover;
+	display: block;
+	transition: transform 0.25s ease;
+}
+.gallery-item img:hover {
+	transform: scale(1.05);
+}
+.gallery-caption {
+	padding: 8px;
+	font-size: 13px;
+	color: #666;
+	text-align: center;
+}
