@@ -2,24 +2,99 @@
 <html lang="id">
 	<head>
 		<title>Gallery</title>
+		<link rel="stylesheet" href="../assets/css/style.css" />
+		<style>
+			/* Internal gallery styles (moved from global) */
+			.gallery-marquee {
+				padding: 10px;
+				margin: 15px 0;
+				background: #f8f9fa;
+				border-radius: 8px;
+			}
+			.gallery-marquee img {
+				height: 80px;
+				object-fit: cover;
+				border-radius: 6px;
+				margin-right: 10px;
+			}
+			.gallery-hero {
+				border: 2px solid #ecf0f1;
+				padding: 12px;
+				border-radius: 8px;
+				background: #fbfcfd;
+				margin: 12px 0;
+			}
+			.gallery-hero img {
+				height: 80px;
+				object-fit: cover;
+				border-radius: 6px;
+				margin-right: 10px;
+			}
+			.gallery-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+				gap: 12px;
+				margin: 18px 0;
+			}
+			.gallery-item {
+				overflow: hidden;
+				border-radius: 8px;
+				border: 1px solid #e6e9ee;
+				background: #fff;
+			}
+			.gallery-item img {
+				width: 100%;
+				height: 100px;
+				object-fit: cover;
+				display: block;
+				transition: transform 0.25s ease;
+			}
+			.gallery-item img:hover {
+				transform: scale(1.05);
+			}
+			.gallery-caption {
+				padding: 8px;
+				font-size: 13px;
+				color: #666;
+				text-align: center;
+			}
+		</style>
 	</head>
-	<body align="center">
+	<body>
 		<h2>Gallery</h2>
-		<marquee behavior="scroll" direction="left" scrollamount="5">
+		<marquee
+			class="gallery-marquee"
+			behavior="scroll"
+			direction="left"
+			scrollamount="5">
 			<img src="https://placebear.com/120/80" alt="bear" />
 			<img src="https://placecats.com/neo/120/80" alt="cat" />
 		</marquee>
 		<!-- target="maincontent" untuk beberapa link ketentuan soal tidak bisa karena
 				 ada security policy dari pihak pemilik website, jadi menggunakan link eksternal lain -->
-		<p>Klik untuk melihat sumber:</p>
-		<a href="https://picsum.photos/id/237/200/300" target="maincontent"
-			><img src="https://picsum.photos/id/237/200/300" alt="dog"
-		/></a>
-		<a href="https://picsum.photos/seed/picsum/200/300" target="maincontent"
-			><img src="https://picsum.photos/seed/picsum/200/300" alt="winter"
-		/></a>
-		<a href="https://placeimg.com/" target="maincontent"
-			><img src="https://picsum.photos/id/15/200/300" alt="nature"
-		/></a>
+		<p class="text-center">Klik untuk melihat sumber:</p>
+		<div class="gallery-grid container">
+			<a
+				class="gallery-item"
+				href="https://picsum.photos/id/237/200/300"
+				target="maincontent">
+				<img src="https://picsum.photos/id/237/600/400" alt="dog" />
+				<div class="gallery-caption">Dog</div>
+			</a>
+			<a
+				class="gallery-item"
+				href="https://picsum.photos/seed/picsum/200/300"
+				target="maincontent">
+				<img src="https://picsum.photos/seed/picsum/600/400" alt="winter" />
+				<div class="gallery-caption">Winter</div>
+			</a>
+			<a
+				class="gallery-item"
+				href="https://picsum.photos/id/15/200/300"
+				target="maincontent">
+				<img src="https://picsum.photos/id/15/600/400" alt="nature" />
+				<div class="gallery-caption">Nature</div>
+			</a>
+		</div>
 	</body>
 </html>
