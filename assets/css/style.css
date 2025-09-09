@@ -14,11 +14,20 @@ body {
 body {
 	margin: 0;
 	background: #fff;
-	/* karena teks semua sama jadi langsung styling lewat body */
-	font-size: 25px;
 	font-family: "Segoe UI", Arial, sans-serif;
-	color: #2e8b57;
-	font-weight: 700;
+	color: #223;
+	line-height: 1.4;
+	font-weight: 600;
+}
+
+a {
+	color: #3273a8;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #0f6370;
+	text-decoration: none;
 }
 
 /* Kontainer utama */
@@ -43,12 +52,120 @@ body {
 	justify-content: center;
 }
 
+.brand {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+.brand .logo {
+	width: 35px;
+	height: 35px;
+	border-radius: 8px;
+	background: linear-gradient(45deg, #2c7a7b, #3282b8);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	font-weight: 800;
+}
+.brand .title {
+	font-size: 20px;
+	font-weight: 800;
+	color: #164;
+}
+
+/* Nav buttons */
+.nav {
+	background: #f3fbff;
+}
+.nav .btn {
+	background: #3273a8;
+	color: #fff;
+	border: none;
+	padding: 10px 14px;
+	border-radius: 8px;
+	cursor: pointer;
+}
+.nav .btn:hover {
+	background: #285e82;
+}
+
+/* Left sidebar */
+.left {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 18px;
+}
+.left h3 {
+	margin: 0 0 8px 0;
+	color: #0f6370;
+}
+.left .links {
+	margin: 8px 0 0 18px;
+	color: #0f6370;
+}
+
+/* Right sidebar */
+.right {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 18px;
+}
+.right h3 {
+	margin: 0 0 8px 0;
+	color: #7a2b2b;
+}
+.right .links {
+	margin: 8px 0 0 18px;
+	color: #7a2b2b;
+	list-style: square;
+	padding: 0;
+}
+.main-content h2 {
+	color: #155;
+	margin-top: 0;
+	text-align: center;
+}
+.cards {
+	display: flex;
+	gap: 14px;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start; /* keep card tops aligned */
+}
+.card {
+	width: 220px;
+	height: 150px;
+	border: 1px solid #e6e6e6;
+	border-radius: 10px;
+	padding: 14px;
+	background: #fff;
+}
+.card h4 {
+	margin: 0 0 8px 0;
+	color: #244;
+}
+
+/* class untuk custom warna card berbeda-beda */
+.red {
+	background: #ffdddd;
+	border-color: #ffaaaa;
+}
+.blue {
+	background: #ddeeff;
+	border-color: #aabbff;
+}
+.green {
+	background: #ddffdd;
+	border-color: #aaffaa;
+}
 /* Area konten utama: menggunakan flex untuk baris kolom */
 .content-area {
 	display: flex;
 	gap: 14px;
 	margin: 0;
-	/* memungkinkan area tengah tumbuh untuk mengisi ruang vertikal yang tersedia */
 	flex: 1 1 auto;
 }
 
@@ -76,11 +193,11 @@ body {
 	flex: 1 1 auto;
 	border: 2px solid #888;
 	padding: 24px 14px;
-	background: #f6f6f6;
-	/* agar teks berada di tengah */
+	background: #fff;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
-	justify-content: center;
+	gap: 18px;
 }
 
 /* Tambahin spasi internal kecil pada blok atas/bawah agar border tidak bertumpuk 
@@ -93,7 +210,7 @@ Ini dipisah biar gampang custom*/
 	padding: 18px 12px;
 }
 .footer {
-	padding: 18px 12px;
+	padding: 20px 12px;
 }
 
 /* Tambahin jarak vertikal kecil agar masing-masing elemen gak bersentuhan (mengikuti gambar soal) */
@@ -126,5 +243,32 @@ Ini dipisah biar gampang custom*/
 	.main-content,
 	.footer {
 		border: 4px solid #888;
+	}
+
+	.cards p {
+		font-size: 20px;
+	}
+
+	.left h3,
+	p {
+		font-size: 10px;
+	}
+
+	.right h3 {
+		font-size: 10px;
+	}
+	.links {
+		font-size: 10px;
+	}
+
+	.brand .logo {
+		color: #26523c;
+		font-size: 20px;
+	}
+
+	.nav .btn {
+		color: #26523c;
+		font-size: 14px;
+		font-weight: 700;
 	}
 }
