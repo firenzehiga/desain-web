@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="id">
 	<head>
-		<title>Tugas 4 Desain Web | CSS</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Tugas 5 | CSS Layout</title>
+		<link rel="stylesheet" href="assets/css/style.css" />
 	</head>
-	<!-- Nama: Firenze Higa Putra    Asal Kampus: STT Terpadu Nurul Fikri  -->
-<frameset rows="15%,10%,* ,10%" frameborder="1" border="1">
-    <frame src="layout/header.html" name="header" noresize scrolling="no">
-    <frame src="layout/nav.html" name="nav" noresize scrolling="no">
-    <frameset cols="20%,* ,20%">
-        <frame src="layout/left.html" name="left" noresize>
-        <frame src="pages/home.html" name="maincontent" >
-        <frame src="layout/right.html" name="right" noresize>
-    </frameset>
-    <frame src="layout/footer.html" name="footer" noresize scrolling="no">
-</frameset>
-<noframes>
-    Browser Anda tidak mendukung frameset.
-</noframes>
+	<body>
+		<div class="container">
+			<header class="header">Header</header>
+			<nav class="nav">Navigation Menu</nav>
+			<section class="content-area">
+				<aside class="sidebar left">Content</aside>
+				<main class="main-content">Main Content</main>
+				<aside class="sidebar right">Content</aside>
+			</section>
+			<footer class="footer">Footer</footer>
+		</div>
+	</body>
 </html>
