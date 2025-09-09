@@ -110,7 +110,7 @@ fieldset {
 	border-radius: 8px;
 	padding: 15px;
 	margin: 10px;
-	background: #fff;
+	background: transparent;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 	border: 1px solid #ddd;
 }
@@ -118,7 +118,7 @@ fieldset legend {
 	padding: 0 10px;
 	font-weight: 700;
 	color: #2c3e50;
-	background: #fff;
+	background: transparent;
 }
 
 /* Lists */
@@ -155,7 +155,6 @@ div {
 
 /* Navigation */
 nav {
-	border-radius: 5px;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -194,6 +193,7 @@ tbody td {
 	color: #fff;
 	text-align: center;
 	padding: 15px 0;
+	border: none;
 }
 .header h1 {
 	color: #fff;
@@ -203,10 +203,9 @@ tbody td {
 }
 
 .nav-menu {
-	background: #fff;
+	background: #34495e;
 	padding: 0 12px;
 	text-align: center;
-	border-bottom: 2px solid #ecf0f1;
 	height: 100%;
 	display: flex;
 	align-items: center;
